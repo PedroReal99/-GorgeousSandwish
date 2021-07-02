@@ -1,0 +1,14 @@
+ContextMap ContextMapper {
+    contains Order
+    contains Sandwich
+    contains User
+
+    Order <- User
+
+    Order <- Sandwich
+
+}
+
+BoundedContext Order
+BoundedContext Sandwich
+BoundedContext User

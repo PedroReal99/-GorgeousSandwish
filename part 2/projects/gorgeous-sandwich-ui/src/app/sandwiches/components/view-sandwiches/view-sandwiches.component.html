@@ -1,0 +1,4 @@
+<h3 [translate]="'sandwich.list'"></h3>
+<ng-container *ngFor="let current of sandwichesList">
+  <li><a routerLink="/sandwich/{{current.sandwichId}}">{{current.designation}}</a></li>
+</ng-container>

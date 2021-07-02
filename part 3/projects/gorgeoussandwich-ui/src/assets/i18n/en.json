@@ -1,0 +1,13 @@
+{
+  "sandwich": {
+    "designation": "Designation:",
+    "description": "Description:",
+    "type": "Type:",
+    "list": "Sandwich List",
+    "details": "Sandwich Details"
+  },
+  "links": {
+    "back": "Back"
+  },
+  "comments": "Comments:"
+}

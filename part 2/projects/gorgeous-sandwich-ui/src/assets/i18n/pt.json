@@ -1,0 +1,13 @@
+{
+  "sandwich": {
+    "designation": "Designação:",
+    "description": "Descrição:",
+    "type": "Tipo:",
+    "list": "Lista de Sanduíches",
+    "details": "Detalhes da Sanduíche"
+  },
+  "links": {
+    "back": "Voltar"
+  },
+  "comments": "Comentários:"
+}

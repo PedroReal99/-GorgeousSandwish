@@ -1,0 +1,38 @@
+package com.isep.gorgeoussandwich.controller;
+
+
+import com.isep.gorgeoussandwich.dto.UserDTO;
+import com.isep.gorgeoussandwich.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/user")
+    public ResponseEntity<List<UserDTO>> getAllUsers(){
+        List<UserDTO> userList = userService.getAllUsers();
+        return ResponseEntity.ok().body(userList);
+    }
+
+    @PostMapping("/user")
+    public ResponseEntity<HttpStatus> addUser(@RequestBody UserDTO userDto){
+        System.out.println("Nome:"+userDto.getName());
+        return ResponseEntity.ok().body(this.userService.addUser(userDto));
+       //return null;
+    }
+
+    @GetMapping("/user/{id}")
+    public ResponseEntity<UserDTO> getUserById(@PathVariable long id){
+        UserDTO sandwichDTO = userService.getUserById(id);
+        return ResponseEntity.ok().body(sandwichDTO);
+    }
+
+}

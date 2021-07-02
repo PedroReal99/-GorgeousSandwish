@@ -1,0 +1,31 @@
+<div class="detail">
+  <h3 [translate]="'sandwich.details'"></h3>
+  <label [translate]="'sandwich.designation'"></label>
+  {{sandwich.designation.designation}}
+  <br>
+
+  <label [translate]="'sandwich.description'"></label>
+  {{sandwich.description.description}}
+  <br>
+
+  <label [translate]="'sandwich.type'"></label>
+  {{sandwich.type.type}}
+</div>
+<br>
+<div class="comment">
+  <h3 [translate]="'comments'"></h3>
+  <ng-container *ngFor="let current of comments">
+    <p>{{current.description.description}}</p>
+  </ng-container>
+  <br>
+  <h3 [translate]="'review'"></h3>
+  <ng-container *ngFor="let current of reviews">
+    <p>{{current.grade.grade}}</p>
+  </ng-container>
+</div>
+<br>
+
+<div class="back-button">
+  <br>
+  <a routerLink="/sandwich" [translate]="'links.back'"></a>
+</div>
